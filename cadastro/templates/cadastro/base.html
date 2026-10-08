@@ -5,21 +5,31 @@
     <title>{% block titulo %}Meu Site{% endblock %}</title>
 </head>
 <body>
+    
+    <header>
+        <h1>Cadastro</h1>
+    </header>
+    <hr>
 
     <nav>
         <a href="/">Início</a> |
+        <a href="/adicionar/">nova pessoa</a> |
         <a href="/contato/">Contato</a>
     </nav>
     <hr>
 
     <main>
+
+        {{ teste | striptags }}
+
         {% block conteudo %}{% endblock %}
     </main>
 
     <hr>
     <footer>
-        <p>&copy; 2026 Wyiro</p>
+        <p>&copy; 2026 {{ nome | default:"visitante" }}</p>
     </footer>
 
 </body>
+
 </html>

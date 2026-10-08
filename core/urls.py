@@ -23,3 +23,4 @@ urlpatterns = [
     # Rota para o aplicativo "cadastro"
     path('', include('cadastro.urls')),
 ]
+
